@@ -79,7 +79,7 @@ export function App(_model: AppModel) {
 		invisibleDownloadUrl.remove();
 	}
 
-	return <div>
+	return <main>
 		<FileSelector loadFile={parseFile}/>
 		<button onClick={writeFile}>Save Changes</button>
 		{
@@ -87,5 +87,5 @@ export function App(_model: AppModel) {
 				<FileEditor name={name} contents={contents} onChange={newContent => { files[decodedName] = { name, contents: newContent }; setFiles(files)}} />
 			</div>)
 		}
-	</div>
+	</main>
 }

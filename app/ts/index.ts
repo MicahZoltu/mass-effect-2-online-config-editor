@@ -13,9 +13,7 @@ window.rootModel = rootModel
 // specify our render function, which will be fired anytime rootModel is mutated
 function rerender() {
 	const element = preact.createElement(App, rootModel)
-	const main = document.querySelector('main')!
-	main.innerText = ''
-	preact.render(element, main)
+	preact.render(element, document.body)
 }
 
 // kick off the initial render
